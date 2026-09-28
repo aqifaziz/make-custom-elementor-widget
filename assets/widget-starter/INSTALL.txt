@@ -1,0 +1,21 @@
+ELEMENTOR SECTION WIDGET
+========================
+
+Copy the included inc/ and assets/ folders into the root of the active theme.
+
+Add this line once to functions.php:
+
+require_once get_theme_file_path( '/inc/elementor-widgets/{{PAGE_KEY}}/{{WIDGET_FILE}}.php' );
+
+Elementor widget:
+
+Title:    {{WIDGET_TITLE}}
+Category: {{CATEGORY_TITLE}}
+Icon:     {{ELEMENTOR_PANEL_ICON}}
+
+Performance:
+
+- CSS and JavaScript load only on pages containing this widget.
+- CSS is registered early and loads in the existing document head.
+- JavaScript loads in the footer.
+- Local asset versions update automatically through filemtime().

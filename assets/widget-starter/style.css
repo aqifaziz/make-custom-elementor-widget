@@ -1,0 +1,97 @@
+.{{ROOT_CLASS}} {
+  --section-accent: {{DEFAULT_ACCENT}};
+  --section-heading: #1f2937;
+  --section-body: #64748b;
+  --section-background: #ffffff;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: var(--section-padding-top, 0) 0 var(--section-padding-bottom, 0);
+  overflow: hidden;
+  background: var(--section-background);
+  color: var(--section-body);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.{{ROOT_CLASS}},
+.{{ROOT_CLASS}} *,
+.{{ROOT_CLASS}} *::before,
+.{{ROOT_CLASS}} *::after {
+  box-sizing: border-box;
+}
+
+.{{ROOT_CLASS}}__inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: var(--site-header-side-padding, 24px);
+}
+
+.{{ROOT_CLASS}}__title {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--section-heading) !important;
+  font: 700 40px/1.1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  letter-spacing: -0.03em !important;
+  text-transform: none !important;
+}
+
+.{{ROOT_CLASS}}__description {
+  margin: 16px 0 0 !important;
+  padding: 0 !important;
+  color: var(--section-body) !important;
+  font: 400 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.{{ROOT_CLASS}}__button,
+.{{ROOT_CLASS}}__button:visited {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 24px 0 0 !important;
+  padding: 14px 22px !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  background: var(--section-accent) !important;
+  color: #ffffff !important;
+  font: 700 16px/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+.{{ROOT_CLASS}}__button:focus-visible {
+  outline: 3px solid rgba(0, 0, 0, 0.25);
+  outline-offset: 3px;
+}
+
+.elementor-widget-{{WIDGET_NAME}},
+.elementor-widget-{{WIDGET_NAME}} > .elementor-widget-container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.elementor-widget-{{WIDGET_NAME}} > .elementor-widget-container {
+  overflow: hidden !important;
+}
+
+@media (max-width: 900px) {
+  .{{ROOT_CLASS}}__inner {
+    padding-inline: var(--site-mobile-side-padding, 20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .{{ROOT_CLASS}} *,
+  .{{ROOT_CLASS}} *::before,
+  .{{ROOT_CLASS}} *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

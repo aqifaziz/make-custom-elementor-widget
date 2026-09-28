@@ -1,0 +1,14 @@
+interface:
+  display_name: Convert Elementor Section
+  short_description: Convert HTML sections into exact Elementor widgets
+  default_prompt: Use $convert-elementor-section to convert the supplied HTML, CSS,
+    and JavaScript section into a production-ready Elementor widget.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
